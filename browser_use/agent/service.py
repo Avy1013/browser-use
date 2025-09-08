@@ -1455,8 +1455,6 @@ class Agent(Generic[Context, AgentStructuredOutput]):
 					self.logger.debug(f'Excluding URL with word in excluded words from auto-navigation: {url}')
 					continue
 
-				position = task_without_emails.find(url)
-
 				found_urls.append(url)
 
 		unique_urls = list(set(found_urls))
