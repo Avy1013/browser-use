@@ -5,10 +5,10 @@ concurrency:
   group: ${{ github.workflow }}-${{ github.event.pull_request.number || github.ref }}
   cancel-in-progress: true
 
-on:
-  push:
-  release:
-    types: [published]
+# on:
+#   push:
+#   release:
+#     types: [published]
 
 jobs:
   build_publish_image:

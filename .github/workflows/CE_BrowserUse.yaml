@@ -1,9 +1,6 @@
 name: Continues Evaluation Browser Use
 
 on:
-  push:
-    branches:
-      - 'main'
   pull_request:
     branches:
       - 'main'

@@ -7,21 +7,21 @@ permissions:
   statuses: write       # Allow writing statuses on PRs
   discussions: write
 
-# Cancel in-progress runs when a new commit is pushed to the same branch/PR
-concurrency:
-  group: ${{ github.workflow }}-${{ github.event.pull_request.number || github.ref }}
-  cancel-in-progress: true
+# # Cancel in-progress runs when a new commit is pushed to the same branch/PR
+# concurrency:
+#   group: ${{ github.workflow }}-${{ github.event.pull_request.number || github.ref }}
+#   cancel-in-progress: true
 
-on:
-  push:
-    branches:
-      - main
-      - stable
-      - 'releases/**'
-    tags:
-      - '*'
-  pull_request:
-  workflow_dispatch:
+# on:
+#   push:
+#     branches:
+#       - main
+#       - stable
+#       - 'releases/**'
+#     tags:
+#       - '*'
+#   pull_request:
+#   workflow_dispatch:
     
 jobs:
   find_tests:
