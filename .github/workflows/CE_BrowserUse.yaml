@@ -52,7 +52,7 @@ jobs:
         run: |
           cat > payload.json <<'JSON'
           {
-            "agent_name": "Browser Use",
+            "agent_name": "browser-use",
             "branch": "${{ github.ref_name }}",
             "commit": "${{ github.sha }}",
             "commit_sha": "${{ steps.short-sha.outputs.short_sha }}",
