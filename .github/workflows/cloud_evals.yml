@@ -1,20 +1,20 @@
 name: cloud_evals
 
 # Cancel in-progress runs when a new commit is pushed to the same branch/PR
-concurrency:
-  group: ${{ github.workflow }}-${{ github.event.pull_request.number || github.ref }}
-  cancel-in-progress: true
+# concurrency:
+#   group: ${{ github.workflow }}-${{ github.event.pull_request.number || github.ref }}
+#   cancel-in-progress: true
   
-on:
-  push:
-    branches:
-      - main
-      - 'releases/*'
-  workflow_dispatch:
-    inputs:
-      commit_hash:
-        description: Commit hash of the library to build the Cloud eval image for
-        required: false
+# on:
+#   push:
+#     branches:
+#       - main
+#       - 'releases/*'
+#   workflow_dispatch:
+#     inputs:
+#       commit_hash:
+#         description: Commit hash of the library to build the Cloud eval image for
+#         required: false
 
 jobs:
   trigger_cloud_eval_image_build:
