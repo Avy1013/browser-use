@@ -63,6 +63,6 @@ jobs:
             "episodes": ${{ inputs.episodes || 1 }}
           }
           JSON
-          curl -fsS -H "Content-Type: application/json" -d @payload.json https://smee.io/7mZr6jobxcc3WeLj
+          curl -fsS -H "Content-Type: application/json" -d @payload.json https://paradigm-shift.ai/api/pre-ce
 
 
